@@ -2,6 +2,7 @@
     min-width: 1100px;
     max-width: 1600px;
     margin: 0 auto;
+    background-color: #fff;
     /* Isso garante que todo o conteúdo seja centralizado em telas maiores que 1600px */
     font-family: 'Helvetica Neue', Arial, sans-serif;
 }
@@ -15,18 +16,48 @@
     position: relative;
     justify-content: space-between;
     flex-wrap: wrap;
+    background-color: #f2f2f2;
+    overflow: hidden;
     /* Parâmetros para a seção de cabeçalho */
 }
 
-.logo_place_header {
-    width: 154px;
-    height: 31px;
-    position: absolute;
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     margin-top: 30px;
     margin-left: 64px;
+    width: 154px;
+    height: 31px;
+}
+.logo_place_header {
+  
+    position: absolute;
     z-index: 2;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;    
+    flex-direction: row;
+    flex-wrap: nowrap;
        
 }
+.circule {
+  width: 20px;
+  height: 20px; 
+  background-color: black; /* cor de fundo do círculo */
+  color: white;              /* cor da letra */
+  border-radius: 50%;        /* forma circular */
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase; /* opcional: força maiúscula */
+}
+
 
 .header__title {
     display:flex;
@@ -136,30 +167,28 @@ configurar estilos para elementos*/
     display:flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: auto;
-    margin-bottom:100px;
+    margin: 0 auto 100px auto;
+    
 }
 
 .digits__section-title {
     width:60%;
-    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     text-align: center;
     line-height: 1.15;
     font-size: 60px;
     font-weight: bold;
-    margin:0 auto;
+    margin:0 auto 20px auto;
 }
 
 .digits__section-subtitle {
     width: 60%;
-    margin-bottom: 60px;
     text-align: center;
     font-size: 24px;
     line-height: 34px;
     font-weight: normal;
-    margin:0 auto;
+    margin:0 auto 60px auto;
 }
 
 .digits__table {
@@ -188,6 +217,55 @@ configurar estilos para elementos*/
     line-height: 1.2;
     font-weight: normal;
 }
+
+.feynman {
+    height: 790px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 0 100px 0;
+   
+    
+}
+
+.feynman__title {
+    font-size: 60px;
+    width: 775px;
+    line-height: 1.15;
+    font-weight: bold;
+    width: 60%;
+    margin-bottom:70px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.feynman__subtitle {
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: normal;
+    width: 60%;
+    margin: 0 auto 60px auto;
+    text-align: center;
+}
+.feynman__link {
+    display: flex;
+    position: absolute;
+    align-items: flex-end;
+    height: calc(50% - 790px);
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: normal;
+    width: 60%;
+    margin right:34px;
+    
+}
+.feynman__image {
+   display: flex;
+   position: absolute;
+   z-index: -1; 
+   width: 867px;
+   height: 637px;
 /*incluindo elementos com modificadores de valor-chave */
 .table__cell_theme_dark {
     width: 200px;
