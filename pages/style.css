@@ -3,6 +3,7 @@
     max-width: 1600px;
     margin: 0 auto;
     background-color: #fff;
+    box-sizing: border-box;
     /* Isso garante que todo o conteúdo seja centralizado em telas maiores que 1600px */
     font-family: 'Helvetica Neue', Arial, sans-serif;
 }
@@ -167,14 +168,12 @@ configurar estilos para elementos*/
     display:flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0 auto 100px auto;
+    margin-bottom: 100px;
     
 }
 
-.digits__section-title {
+.section-title {
     width:60%;
-    display: flex;
-    flex-direction: column;
     text-align: center;
     line-height: 1.15;
     font-size: 60px;
@@ -182,7 +181,7 @@ configurar estilos para elementos*/
     margin:0 auto 20px auto;
 }
 
-.digits__section-subtitle {
+.section-subtitle {
     width: 60%;
     text-align: center;
     font-size: 24px;
@@ -191,9 +190,9 @@ configurar estilos para elementos*/
     margin:0 auto 60px auto;
 }
 
-.digits__table {
+.table {
     width:1100px;
-    margin:0 auto 100px auto;
+    margin:0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -201,18 +200,19 @@ configurar estilos para elementos*/
     padding: 0;
 }
 
-.digits__table-cell {
+.table-cell {
     width:250px;
-    margin-bottom: 60px;
+    gap: 60px;
 }
 
-.digits__table-heading {
+.table-heading {
     font-size: 24px;
     line-height: 1.15;
     font-weight: bold;
+    margin-bottom: 20px;
 }
 
-.digits__table-text {
+.table-text {
     font-size: 18px;
     line-height: 1.2;
     font-weight: normal;
@@ -221,55 +221,136 @@ configurar estilos para elementos*/
 .feynman {
     height: 790px;
     display: flex;
+    background-color: #f2f2f2;
+    margin-bottom: 0;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-    margin: 0 0 100px 0;
+    position: relative;
    
-    
+        
 }
 
 .feynman__title {
-    font-size: 60px;
-    width: 775px;
-    line-height: 1.15;
-    font-weight: bold;
     width: 60%;
-    margin-bottom:70px;
-    display: flex;
-    flex-direction: column;
+    font-size: 120px;
+    margin: 0 auto 70px auto; 
+    line-height: 1.15;
+    font-weight: bold;  
     text-align: center;
+    z-index: 2;
+    position: relative;
 }
 .feynman__subtitle {
-    font-size: 24px;
-    line-height: 34px;
-    font-weight: normal;
     width: 60%;
-    margin: 0 auto 60px auto;
+    font-size: 36px;
+    line-height: 51px;
+    font-weight: normal;
+    margin:  0 auto 60px auto;
     text-align: center;
+    z-index: 2;
+    position: relative;
 }
 .feynman__link {
-    display: flex;
     position: absolute;
     align-items: flex-end;
-    height: calc(50% - 790px);
+    top: 50%;
+    right: 48px;
+    transform: translateY(-50%);
     text-decoration: none;
-    font-size: 18px;
-    line-height: 1.2;
+    font-size: 36px;
+    line-height: 51px;
     font-weight: normal;
-    width: 60%;
-    margin right:34px;
-    
+    color: #2F80ED; 
+    z-index: 2;
+    opacity: 0.2s;
+}
+
+.feynman__link:hover {
+    opacity: 0.7;
 }
 .feynman__image {
    display: flex;
    position: absolute;
-   z-index: -1; 
+   z-index: 1; 
    width: 867px;
    height: 637px;
+   bottom: 0;
+   left: 0;
+}
 /*incluindo elementos com modificadores de valor-chave */
-.table__cell_theme_dark {
+.kaufman {
+    display:flex;
+    Position: relative;
+    overflow: hidden;
+    background-color: #1f1f1f;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 auto 0;
+}
+
+.kaufman__title-theme-dark {
+     width:60%;
+    text-align: center;
+    line-height: 1.15;
+    font-size: 60px;
+    font-weight: bold;
+    margin: 90px auto auto;
+    z-index: 2;
+    color: #f2f2f2;
+
+   
+}
+
+.kaufman__subtitle-theme-dark {
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: normal;
+    color:#f2f2f2;
+    z-index: 2;
+    margin: 20px auto 0;
+
+    
+}
+
+.table_theme-dark{
+    width:1100px;
+    margin:0 auto 90px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    z-index: 2;
+}
+
+.table__cell-theme-dark {
     width: 200px;
     color: white;
     margin-right: 0;
-    margin-top: 80px;
+    padding-top: 80px;
+    z-index: 2;
+}
+
+.table__heading-theme-dark {
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: bold;
+    gap: 20px;
+}
+
+.table__text-theme-dark {
+    font-size: 18px;
+    line-height: 1.15;
+}
+
+.kaufman-triangle {
+    position: absolute;
+    top: 0;
+    right: -124px;
+    width: 660px;
+    height: 636px;
+    z-index: 1;
+   
 }
